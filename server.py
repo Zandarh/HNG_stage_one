@@ -23,6 +23,6 @@ def my_data():
         return jsonify(my_dict)
     else:
         raise MethodNotAllowed
-
 if __name__ == "__main__":
         app.run(debug=True)
+        
