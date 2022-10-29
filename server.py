@@ -1,4 +1,4 @@
-# import main Flask class, then jsonigy and requet object
+# import main Flask class, then jsoniy and requet object
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from werkzeug.exceptions import MethodNotAllowed
