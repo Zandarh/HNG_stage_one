@@ -1,15 +1,12 @@
 # import main Flask class, then jsoniy and requet object
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask import Flask, request
 from werkzeug.exceptions import MethodNotAllowed
 
 
 # create the flask app
 app = Flask(__name__)
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
-CORS(app, resources={r"/*": {"origins": "*"}})
 
-@app.route("/api", strict_slashes=False)
+@app.get("/")
 def my_data():
     """Returns my data"""
     # checking if the http method is Get
@@ -20,9 +17,6 @@ def my_data():
             "age": 30,
             "bio": "I am an aspiring software engineer"
             }
-        return jsonify(my_dict)
+        return (my_dict)
     else:
         raise MethodNotAllowed
-if __name__ == "__main__":
-        app.run(debug=True)
-        
