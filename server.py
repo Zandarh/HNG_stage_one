@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-@app.route("/", strict_slashes=False)
+@app.route("/api", strict_slashes=False)
 def my_data():
     """Returns my data"""
     # checking if the http method is Get
