@@ -20,3 +20,5 @@ def my_data():
         return (my_dict)
     else:
         raise MethodNotAllowed
+if __name__ == "__main__":
+        app.run()
